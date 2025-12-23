@@ -1,0 +1,41 @@
+name: SpeedRunParkour
+version: '1.0.0'
+main: io.github.AlexVila0204.speedRunParkour.SpeedRunParkour
+api-version: '1.21'
+authors: [ AlexVila0204 ]
+
+depend: [PlaceholderAPI]
+
+commands:
+  parkour:
+    description: Main command for administering parkour arenas
+    usage: /parkour <subcommand>
+    permission: parkourtimer.admin
+  parkourreload:
+    description: Reload the ParkourTimer configuration
+    usage: /parkourreload
+    permission: parkourtimer.reload
+  parkourqueue:
+    description: Join a parkour course queue or open menu
+    usage: /parkourqueue [difficulty]
+    permission: parkourtimer.queue
+    aliases: [pq]
+  parkourtop:
+    description: Show arena leaderboard
+    usage: /parkourtop <arena_id> [limit]
+    permission: parkourtimer.top
+    aliases: [ptop]
+
+permissions:
+  parkourtimer.admin:
+    description: Allows full administration of parkour arenas
+    default: op
+  parkourtimer.reload:
+    description: Allows reloading the plugin configuration
+    default: op
+  parkourtimer.queue:
+    description: Allows joining parkour queues and using menus
+    default: true
+  parkourtimer.top:
+    description: Allows viewing leaderboards
+    default: true

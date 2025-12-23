@@ -1,0 +1,11 @@
+# ParkourTimer Configuration
+
+# Display settings
+display:
+  mode: ACTION_BAR
+
+# Storage settings
+storage:
+  type: SQLITE
+  sqlite:
+    filename: "parkourtimer.db"
